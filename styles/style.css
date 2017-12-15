@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Bebas-Neue';
+    src:url('fonts/Bebas-Neue.ttf.woff') format('woff'),
+        url('fonts/Bebas-Neue.ttf.svg#Bebas-Neue') format('svg'),
+        url('fonts/Bebas-Neue.ttf.eot'),
+        url('fonts/Bebas-Neue.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Style  --------------  */
+
+body {
+  font-family: 'Bebas-Neue';
+  padding: 0;
+  margin: 0;
+  background-color: #ECECEC;
+  text-transform: uppercase;
+  font-size: calc(0.75em + 1vmin);
+
+}
+
+
+a {
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+    color: #837661;
+}
+
