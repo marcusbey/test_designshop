@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Bebas-Neue';
-    src:url('fonts/Bebas-Neue.ttf.woff') format('woff'),
-        url('fonts/Bebas-Neue.ttf.svg#Bebas-Neue') format('svg'),
-        url('fonts/Bebas-Neue.ttf.eot'),
-        url('fonts/Bebas-Neue.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('../fonts/Bebas-Neue.ttf.woff') format('woff'),
+        url('../fonts/Bebas-Neue.ttf.svg#Bebas-Neue') format('svg'),
+        url('../fonts/Bebas-Neue.ttf.eot'),
+        url('../fonts/Bebas-Neue.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
