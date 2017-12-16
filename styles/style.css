@@ -104,9 +104,6 @@ nav img {
 
 #banner .container {
   display: inline-flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  padding-left: 56px;
   padding-top: 105px;
   width: 100%;
 }
@@ -115,6 +112,9 @@ nav img {
   top: 200px;
   width: 50%;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: relative;
 }
 
@@ -125,12 +125,12 @@ nav img {
   font-weight: 100;
   letter-spacing: 2px;
   margin: 0;
-  padding-right: 80px;
+  padding-right: 180px;
 }
 
 .bio {
   position: relative;
-  margin: 0 auto;
+  margin-right: 25px;
   width : 579px;
   height: 413px;
   padding: 21px 100px 43px 100px;
