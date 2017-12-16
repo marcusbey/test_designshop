@@ -106,6 +106,8 @@ nav img {
   display: inline-flex;
   align-items: flex-end;
   justify-content: space-around;
+  padding-left: 56px;
+  padding-top: 105px;
   width: 100%;
 }
 
