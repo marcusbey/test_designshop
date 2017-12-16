@@ -76,10 +76,11 @@ nav ul li {
   min-width: 100px;
   padding-left: 8px;
   padding-right: 8px;
+  text-align: center;
 }
 
 nav ul :nth-child(4) {
-  padding-left: 100px;
+  width: 200px;
 }
 nav img {
   position: absolute;
@@ -89,4 +90,36 @@ nav img {
   height: 164px;
   margin-top: 18px;
 }
+
+/* BANNER ===================== */
+
+#banner {
+  height: 837px;
+  background-image: url("../images/banner.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#banner h1 {
+  position: absolute;
+  font-size: 7em;
+  line-height: 0.9;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0px;
+  top: 340px;
+}
+
+
+
+
+
 
