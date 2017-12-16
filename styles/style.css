@@ -1,12 +1,13 @@
 @font-face {
-    font-family: 'Bebas-Neue';
-    src:url('../fonts/Bebas-Neue.ttf.woff') format('woff'),
-        url('../fonts/Bebas-Neue.ttf.svg#Bebas-Neue') format('svg'),
-        url('../fonts/Bebas-Neue.ttf.eot'),
-        url('../fonts/Bebas-Neue.ttf.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Bebas-Neue';
+  src:url('../fonts/Bebas-Neue.ttf.woff') format('woff'),
+      url('../fonts/Bebas-Neue.ttf.svg#Bebas-Neue') format('svg'),
+      url('../fonts/Bebas-Neue.ttf.eot'),
+      url('../fonts/Bebas-Neue.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* General Style  =============== */
 
@@ -17,9 +18,9 @@ body {
   background-color: #ECECEC;
   text-transform: uppercase;
   font-size: calc(0.75em + 1vmin);
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -57,15 +58,15 @@ nav {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding-left: 12vw;
+  padding-right: 12vw;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.9em;
   letter-spacing: 2px;
 
@@ -73,16 +74,104 @@ nav {
 
 nav ul li {
   display: block;
+  min-width: 100px;
   padding-left: 8px;
   padding-right: 8px;
+  text-align: center;
 }
 
+nav ul :nth-child(4) {
+  width: 200px;
+}
 nav img {
   position: absolute;
   margin-left: 50%;
   left: -82px;
   display: block;
   height: 164px;
-  margin-top: 27px;
+  margin-top: 18px;
 }
+
+/* BANNER ===================== */
+
+#banner {
+  height: 837px;
+  background-image: url("../images/banner.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#banner .container {
+  display: inline-flex;
+  padding-top: 105px;
+  width: 100%;
+}
+
+#banner .container>div {
+  top: 200px;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+#banner h1 {
+  font-size: 7em;
+  line-height: 0.9;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-right: 180px;
+}
+
+.bio {
+  position: relative;
+  margin-right: 25px;
+  width : 579px;
+  height: 413px;
+  padding: 21px 100px 43px 100px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  background-color: #FFF;
+}
+
+.bio p {
+  font-size: 0.64em;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: none;
+  font-weight: 100;
+  color: #4A4A4A;
+  letter-spacing: 0.2px
+}
+
+.bio h2 {
+  font-size: 36px;
+  font-weight: 100;
+  letter-spacing: 1.1px;
+  margin-bottom: 0;
+}
+
+.bio h4 {
+  text-decoration: underline;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+
+.bio img {
+  position: absolute;
+  left: -210px;
+  top: 10px;
+}
+
+
+
+
+
 
