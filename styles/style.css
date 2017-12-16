@@ -345,9 +345,18 @@ nav img {
 
 /* FOOTER ========================= */
 
+#footer {
+  color: #FFF;
+}
+
+#footer h2 {
+  font-size: 4em;
+}
+
 .subscribe  {
   height: 364px;
   width: 100%;
+  padding-top: 35px;
   background-color: #0C0C0C;
 }
 
@@ -358,7 +367,7 @@ nav img {
 footer {
   height: 450px;
   background-color: #000000;
-  color: #FFF;
+
 }
 
 footer .container {
@@ -366,7 +375,15 @@ footer .container {
   width: 100%;
 }
 
+footer .container div {
+  width: 50%;
+}
 
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
 
 
 
