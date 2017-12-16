@@ -46,11 +46,19 @@ li {
 .container {
   width: 1180px;
   margin: auto;
+  position: relative;
 }
 
 .signature {
   position: absolute;
 }
+
+.middle {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  }
 
 /* HEADER  =================== */
 
@@ -232,15 +240,20 @@ nav img {
   height: 832px;
 }
 
-#blog h1 {
-  font-size: 7em;
-  text-align: center;
+#blog .middle {
+  display: block;
   letter-spacing: 2px;
-  }
+  top: -67px;
+  font-size: 6em;
+  text-align: center;
+  text-decoration: underline;
+}
 
 .header {
   width: 100%;
   height: 80px;
+  margin-top: 170px;
+  margin-bottom: 40px;
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -255,8 +268,8 @@ nav img {
   }
 
 #blog button {
-  height: 50px;
-  width: 160px;
+  height: 45px;
+  width: 209px;
 
 }
 
@@ -287,9 +300,49 @@ nav img {
   height: 108px;
 }
 
-.card h6, p{
+.card h5 {
+  margin: 0;
+  padding: 20px 0px 6px 0px;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.7em;
+  text-transform: none;
+  font-weight: 100;
+  color: #4A4A4A;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* SOCIAL ========================= */
+
+
+#social {
+  height: 825px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#social .middle {
+  height: 100px;
+  text-align: center;
+  top: 50px;
+}
+
+#social h5 {
+  font-size: 1.7em;
   margin: 0;
 }
+
+.gallery {
+  position: relative;
+  padding-top: 250px;
+}
+
+/* FOOTER ========================= */
 
 
 
