@@ -367,24 +367,43 @@ nav img {
 footer {
   height: 450px;
   background-color: #000000;
-
 }
 
-footer .container {
-  display: flex;
-  width: 100%;
+footer .content {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  justify-content: center;
 }
 
-footer .container div {
-  width: 50%;
+.content h4 {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
 }
 
 
-.contact {
-  display: flex;
-  justify-content: space-between;
+.content h6 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 100;
+  letter-spacing: 1.5px;
 }
 
+.categories {
+  padding: 0;
+}
+.categories li {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: none;
+  font-weight: 100;
+  font-size: 0.65em;
+  letter-spacing: 1.2px;
+  line-height: 1.4em;
+  color: rgba( 255, 255, 255, 0.5);
 
+}
 
 
