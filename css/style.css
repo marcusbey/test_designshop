@@ -343,6 +343,7 @@ nav img {
   padding-bottom: 200px;
 }
 
+
 /* FOOTER ========================= */
 
 i {
@@ -372,7 +373,7 @@ i {
 }
 
 footer {
-  height: 450px;
+  height: 350px;
   background-color: #000000;
 }
 
@@ -381,11 +382,6 @@ footer .content {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   justify-content: center;
-}
-
-footer hr {
-  margin-top: 60px;
-  border-color: rgba( 255, 255, 255, 0.5);
 }
 
 .content h4 {
@@ -472,7 +468,11 @@ button i:before {padding-bottom: 5px;
   height: 15px;
   }
 
-.credit {
+.credit :before {
+  display: none;
+}
+
+.credit p {
   font-family: 'Open Sans', sans-serif;
   text-transform: none;
   font-weight: 100;
@@ -482,3 +482,7 @@ button i:before {padding-bottom: 5px;
   color: rgba( 255, 255, 255, 0.5);
 }
 
+.credit hr {
+  margin-top: 60px;
+  border-color: rgba( 255, 255, 255, 0.5);
+}
