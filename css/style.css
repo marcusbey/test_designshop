@@ -28,13 +28,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #333;
-  cursor: pointer;
   text-decoration: none;
 }
 
 a:hover {
-    color: #837661;
+    color: #5A5A5A;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 li {
@@ -134,7 +134,7 @@ nav img {
 
 #banner h1 {
   font-size: 7em;
-  line-height: 0.9;
+  line-height: 0.9em;
   text-align: center;
   letter-spacing: 2px;
   margin: 0;
@@ -155,7 +155,7 @@ nav img {
 
 .bio p {
   font-size: 0.64em;
-  line-height: 1.6;
+  line-height: 1.6em;
   font-family: 'Open Sans', sans-serif;
   text-transform: none;
   color: #4A4A4A;
@@ -189,7 +189,7 @@ nav img {
   height: 700px;
 }
 
-#vision .contents {
+#vision .content {
   position: relative;
   width: 100%;
   display: flex;
@@ -210,21 +210,18 @@ nav img {
 
 .quote {
   width: 380px;
-  height: 300px;
   margin-top: 270px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: space-around;
 }
 
 .quote h1 {
+  height: 100px;
   font-size: 20em;
-  line-height: 0px;
-  margin: 0px;
+  line-height: 0.9;
+  margin: 0;
 }
 
 .quote p {
+  padding-top: 0px;
   font-size: 1.8em;
   line-height: 42px;
   margin: 0;
@@ -259,6 +256,7 @@ nav img {
   align-items: flex-end;
 }
 
+
 .header h3 {
   display: block;
   font-size: 4em;
@@ -270,7 +268,13 @@ nav img {
 #blog button {
   height: 45px;
   width: 209px;
-
+  font-size: 0.75em;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #000;
+  color: #FFF;
+  border: none;
 }
 
 .visual {
@@ -410,7 +414,7 @@ input {
   color: rgba( 255, 255, 255, 0.5);
   padding-bottom: 10px;
   margin-right: 20px;
-  height: 20px;
+  height: 40px;
   font-family: 'Open Sans', sans-serif;
   text-transform: none;
   font-weight: 100;
@@ -422,7 +426,7 @@ input {
 
   }
 
-button {
+form button {
   background-color: #0C0C0C;
   color: #FFF;
   border: none;
@@ -430,11 +434,11 @@ button {
   text-align: right;
 }
 
-button i {
+form button i {
   padding: 8px;
 
 }
-button i:before {padding-bottom: 5px;
+form button i:before {padding-bottom: 5px;
   font-weight: 100;
   font-size: 2em;
 }
@@ -464,8 +468,8 @@ button i:before {padding-bottom: 5px;
   font-weight: 100;
   font-size: 0.8em;
   padding: 7px;
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
   }
 
 .credit :before {
