@@ -3,12 +3,7 @@
 Compiled to css and modified
 */
 
-* {
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a .photo-style, a .gallery , .gallery {
+ a .gallery , .gallery {
   box-sizing: border-box;
   background-color: #fff;
   display: flex;
@@ -19,21 +14,21 @@ a .photo-style, a .gallery , .gallery {
   padding-bottom: 0px;
   transition: all .5s ease;
 }
-a .photo-style:hover, a .gallery:hover {
+a .gallery:hover {
   transform: rotate(0);
   transform: scale(1.4);
   box-shadow: 2px 4px 8px 3px rgba(0, 0, 0, 0.1);
 }
-a .photo-style:hover:hover .photo-mark, a .gallery:hover:hover .photo-mark {
+ .photo-mark, a .gallery:hover:hover .photo-mark {
   position: relative;
 }
 
-a .photo-style .photo-mark, a .gallery .photo-mark  {
+.photo-mark, a .gallery .photo-mark  {
   display: flex;
   justify-content: center;
   background-color: #000;
 }
-a .photo-style .photo-mark img, a .gallery img .photo-mark{
+.photo-mark img, a .gallery img .photo-mark{
   object-fit: cover;
 }
 

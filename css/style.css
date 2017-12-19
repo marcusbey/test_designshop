@@ -42,10 +42,14 @@ li {
   list-style: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Body Element =============== */
 
 .container {
-  width: 1180px;
+  max-width: 1180px;
   margin: auto;
   position: relative;
 }
@@ -63,7 +67,6 @@ li {
 
 /* HEADER  =================== */
 
-
 nav {
   width: 100%;
   height: 110px;
@@ -71,43 +74,96 @@ nav {
   background-color: #FFF;
   }
 
+@media all and (min-width: 1024px) {
+
+  .mob-menu {
+    display: none;
+  }
+
   nav ul {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding-left: 12vw;
-  padding-right: 12vw;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 300;
-  font-size: 0.9em;
-  letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
 
+  nav ul :nth-child(4) {
+    width: 200px;
+  }
+
+  nav ul li {
+    display: block;
+    min-width: 100px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+  }
+
+  nav img {
+    position: absolute;
+    margin-left: 50%;
+    left: -82px;
+    display: block;
+    height: 164px;
+    margin-top: 18px;
+  }
 }
 
-nav ul li {
-  display: block;
-  min-width: 100px;
-  padding-left: 8px;
-  padding-right: 8px;
-  text-align: center;
+
+@media (max-width: 767px) {
+
+  .mob-menu {
+    display: block;
+  }
+
+  nav img {
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    display: block;
+    height: 25vw;
+    }
+
+  nav ul {
+    width: 100%;
+    margin: 0;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
+
+  .mob-menu {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    }
+
+  .mob-menu i {
+    height: 25px;
+  }
 }
 
-nav ul :nth-child(4) {
-  width: 200px;
-}
-nav img {
-  position: absolute;
-  margin-left: 50%;
-  left: -82px;
-  display: block;
-  height: 164px;
-  margin-top: 18px;
-}
+
+
 
 /* BANNER ===================== */
 
@@ -192,15 +248,9 @@ nav img {
 
 #vision .content {
   position: relative;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 140px;
-
-}
-
-#vision .photos:first-child {
-  width: 480px;
 
 }
 
@@ -354,7 +404,7 @@ nav img {
 i {
   text-align: center;
   border: 1px solid #FFF;
-  border-radius: 50%;
+  border-radius: 50% !important;
   }
 
 
@@ -469,8 +519,8 @@ form button i:before {padding-bottom: 5px;
   font-weight: 100;
   font-size: 0.8em;
   padding: 7px;
-  width: 35px;
-  height: 35px;
+  width: 15px;
+  height: 15px;
   }
 
 .credit :before {
