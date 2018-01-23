@@ -39,7 +39,7 @@ a .gallery:hover {
 
 .photo-container {
   width: 100%;
-  height: 740px;
+  min-height: 740px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -86,4 +86,15 @@ a .gallery:hover {
   top: 0;
   left: 320px;
   z-index: 20;
+}
+
+
+@media (max-width: 480px) {
+  .photo-container  {
+  overflow: hidden;
+  }
+  .gallery img {
+    zoom: 0.6;
+  }
+
 }

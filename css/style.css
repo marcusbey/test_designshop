@@ -11,6 +11,7 @@
 
 /* General Style  =============== */
 
+
 body {
   font-family: 'Bebas-Neue';
   padding: 0;
@@ -23,6 +24,10 @@ body {
     box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
@@ -30,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: #000;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
 }
 
 a:hover {
@@ -42,7 +51,7 @@ li {
   list-style: none;
 }
 
-.hidden {
+.hidden:before {
   display: none;
 }
 
@@ -80,16 +89,18 @@ nav {
     display: none;
   }
 
-  nav ul {
-    height: 100%;
+  .menu {
+    height: 110px;
     width: 100%;
+    float: none;
+    overflow-y: auto;
     margin: 0;
     padding-left: 12vw;
     padding-right: 12vw;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 300;
@@ -97,11 +108,11 @@ nav {
     letter-spacing: 2px;
   }
 
-  nav ul :nth-child(4) {
-    width: 200px;
+  .menu :nth-child(4) {
+    width: 250px;
   }
 
-  nav ul li {
+  .menu li {
     display: block;
     min-width: 100px;
     padding-left: 4px;
@@ -120,45 +131,53 @@ nav {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1124px) {
 
   .mob-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    height: 110px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
 
   nav img {
-    position: absolute;
-    top: 15px;
-    left: 10%;
-    display: block;
-    height: 25vw;
-    }
+    margin-top: 20px;
+    max-height: 164px;
+    height: 20vw;
+  }
 
-  nav ul {
-    width: 100%;
+  .menu :nth-child(4) {
+    width: 200px;
+  }
+
+  .menu {
     margin: 0;
-    padding-left: 12vw;
-    padding-right: 12vw;
+    margin-top: 20px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     font-weight: 300;
     font-size: 0.9em;
     letter-spacing: 2px;
   }
 
   .mob-menu {
-    position: absolute;
-    top: 10px;
+    display: block
+    margin-top: 30px;
+    float: right;
     right: 10%;
     }
 
   .mob-menu i {
-    height: 25px;
+    font-size: 40px;
+    border-style: none;
   }
 }
 
@@ -236,6 +255,44 @@ nav {
   top: 10px;
 }
 
+@media (max-width: 1124px) {
+  #banner .container>div {
+    width: 100%;
+  }
+
+  #banner h1 {
+    font-size: 5em;
+    line-height: 0.9em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-right: 30vw;
+  }
+
+  .bio {
+    position: relative;
+    width : 70vw;
+    height: auto;
+    padding: 15px 100px 25px 100px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    background-color: #FFF;
+  }
+  #banner .signature {
+    left: -30vw;
+    width: 40vw;
+    top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bio {
+    padding: 15px 25px 25px 25px;
+  }
+
+}
+
 /* VISION ===================== */
 
 #vision {
@@ -279,13 +336,30 @@ nav {
 }
 
 
+@media (max-width: 480px) {
+  #vision .content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .quote p {
+    font-size: 1.3em;
+  }
+
+  #vision .photos img {
+    width: 100%;
+  }
+}
+
 /* BLOG ========================= */
 
 #blog {
   background-color: #DBDBE2;
   position: relative;
   margin-top: 217px;
-  height: 832px;
+  min-height: 832px;
 }
 
 #blog .middle {
@@ -297,7 +371,7 @@ nav {
   text-decoration: underline;
 }
 
-.header {
+#blog .header {
   width: 100%;
   height: 80px;
   margin-top: 170px;
@@ -305,6 +379,19 @@ nav {
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+
+@media (max-width: 480px) {
+  #blog .header {
+    margin-top: 180px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middle img {
+    width: 100%;
+  }
 }
 
 
@@ -328,31 +415,34 @@ nav {
   border: none;
 }
 
-.visual {
-  width: 370px;
-  height: 305px;
-}
-
-.card {
-  height: 108px;
+.card:hover {
+  -webkit-box-shadow: 0px -2px 80px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px -2px 80px -5px rgba(0,0,0,0.5);
+  box-shadow: 0px -2px 80px -5px rgba(0,0,0,0.5);
 }
 
 .articles {
-  width: 100%;
-  display: inline-grid;
-  grid-template-columns: 370px 370px 370px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
 
+.card {
+  margin-bottom: 30px;
 }
 
 .card>div:last-child {
+  height: 108px;
   background-color: #FFF;
   position: relative;
   padding: 15px;
+  padding-bottom: 25px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .card h5 {
@@ -370,6 +460,22 @@ nav {
   color: #4A4A4A;
   font-family: 'Open Sans', sans-serif;
 }
+
+.visual {
+  width: 370px;
+  height: 305px;
+}
+
+
+ @media (max-width: 480px) {
+   .card {
+    width: 100%;
+   }
+   .visual {
+     width: calc(370px * 3 / 5);
+     height: calc(305px * 3 / 5);
+   }
+ }
 
 
 /* SOCIAL ========================= */
@@ -399,6 +505,7 @@ nav {
 }
 
 
+
 /* FOOTER ========================= */
 
 i {
@@ -406,7 +513,6 @@ i {
   border: 1px solid #FFF;
   border-radius: 50% !important;
   }
-
 
 #footer {
   color: #FFF;
@@ -428,15 +534,18 @@ i {
 }
 
 footer {
-  height: 350px;
+  min-height: 350px;
   background-color: #000000;
 }
 
-footer .content {
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-  justify-content: center;
+@media all and (min-width: 480px)
+{
+  footer .content {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    justify-content: center;
+  }
 }
 
 .content h4 {
@@ -518,9 +627,9 @@ form button i:before {padding-bottom: 5px;
 .media i {
   font-weight: 100;
   font-size: 0.8em;
-  padding: 7px;
-  width: 15px;
-  height: 15px;
+  padding: 8px;
+  width: 35px;
+  height: 35px;
   }
 
 .credit :before {
@@ -540,4 +649,21 @@ form button i:before {padding-bottom: 5px;
 .credit hr {
   margin-top: 60px;
   border-color: rgba( 255, 255, 255, 0.5);
+}
+
+
+@media (max-width: 480px) {
+  #footer form, footer .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+  #footer input {
+    margin-bottom: 20px;
+  }
+
+  footer .content img, footer .content h4, footer .content div {
+    margin-bottom: 20px;
+  }
+
 }
